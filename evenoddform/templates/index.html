@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <b>This page checks Even or Odd number</b>
+        <hr>
+    </head>
+    <body>
+        <form method="POST">{% csrf_token %}
+            <br><br>
+            <label for="n1"> Num:</label>
+            <input name="snum" id="n1" type="number" placeholder="Enter number">
+            <br><br><button> Submit </button>
+            </form>
+            {% if res %}
+                <p> The number is Even</p>
+            {% else %}
+                <p> The number is odd</p>
+            {% endif %}
+    </body>
+</html>
+
